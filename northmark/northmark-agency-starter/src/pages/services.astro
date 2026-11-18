@@ -1,0 +1,82 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<BaseLayout title="Website design & support services | Northmark" description="Explore Northmark's small-business website design, development, launch, and ongoing management services.">
+  <Header />
+  <main id="main">
+    <section class="bg-paper">
+      <div class="content-wrap py-16 sm:py-20 lg:py-24">
+        <p class="eyebrow">Services</p>
+        <h1 class="font-display mt-4 max-w-4xl text-5xl leading-[1.05] sm:text-6xl">Everything your website needs to get going—and keep going.</h1>
+        <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-600">From the first page outline to ongoing care, Northmark brings the essentials together with a clear scope and a practical plan.</p>
+        <a class="button button-dark mt-8" href="/pricing">Explore packages <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <section class="content-wrap py-12 sm:py-16">
+      <div class="grid gap-5 md:grid-cols-2">
+        <article class="surface-card p-6 sm:p-8">
+          <div class="flex items-start justify-between gap-4">
+            <div><p class="eyebrow">01 · Launch</p><h2 class="font-display mt-3 text-3xl">Website design &amp; build</h2></div>
+            <span class="font-display text-3xl text-accent">01</span>
+          </div>
+          <p class="mt-5 text-sm leading-7 text-slate-600">A polished, mobile-friendly site structured around your business, services, and customers. We'll agree the pages and scope before the build begins.</p>
+          <ul class="mt-6 grid gap-3 border-t border-line pt-5 text-sm leading-6 text-slate-600">
+            <li>— Responsive page design and development</li>
+            <li>— Core pages and clear navigation</li>
+            <li>— Contact page layout and launch support</li>
+            <li>— Search-friendly page structure and metadata</li>
+          </ul>
+        </article>
+        <article class="surface-card p-6 sm:p-8">
+          <div class="flex items-start justify-between gap-4">
+            <div><p class="eyebrow">02 · Ongoing</p><h2 class="font-display mt-3 text-3xl">Website management</h2></div>
+            <span class="font-display text-3xl text-accent">02</span>
+          </div>
+          <p class="mt-5 text-sm leading-7 text-slate-600">A straightforward support plan for routine maintenance and agreed content updates, with the included time and services spelled out in advance.</p>
+          <ul class="mt-6 grid gap-3 border-t border-line pt-5 text-sm leading-6 text-slate-600">
+            <li>— Routine technical maintenance</li>
+            <li>— Agreed content updates within your plan</li>
+            <li>— A clear request and review process</li>
+            <li>— Larger changes scoped separately</li>
+          </ul>
+        </article>
+      </div>
+      <p class="mt-6 max-w-3xl text-xs leading-6 text-slate-500">Exact deliverables, hosting arrangements, third-party services, and ongoing responsibilities depend on your written project scope. No service is included unless it is listed in that scope.</p>
+    </section>
+
+    <section class="bg-paper py-16 sm:py-20">
+      <div class="content-wrap grid gap-8 md:grid-cols-[.8fr_1.2fr] md:gap-16">
+        <div>
+          <p class="eyebrow">How a project takes shape</p>
+          <h2 class="font-display mt-4 text-4xl leading-tight sm:text-5xl">Straightforward from the start.</h2>
+        </div>
+        <div class="grid gap-0">
+          {[
+            ["01", "Understand the need", "Talk through your business, audience, priorities, and the site's purpose."],
+            ["02", "Set the scope", "Agree the pages, pricing, schedule, and responsibilities in writing."],
+            ["03", "Design and review", "Shape the direction, review the content and layout, and make agreed refinements."],
+            ["04", "Launch and support", "Prepare the approved site for launch, then choose a support plan if it suits."]
+          ].map(([n, title, body]) => (
+            <div class="flex gap-5 border-b border-slate-300/70 py-5 first:pt-0 last:border-0">
+              <span class="font-display text-2xl text-accent">{n}</span>
+              <div><h3 class="font-bold">{title}</h3><p class="mt-2 text-sm leading-6 text-slate-600">{body}</p></div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="content-wrap flex flex-col items-start justify-between gap-6 py-16 sm:py-20 md:flex-row md:items-center">
+      <div><p class="eyebrow">Want to get started?</p><h2 class="font-display mt-3 text-3xl sm:text-4xl">Find a sensible fit for your business.</h2><p class="mt-3 text-sm leading-7 text-slate-600">Review the current package details, or explore the inquiry form preview.</p></div>
+      <div class="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
+        <a class="button button-outline" href="/pricing">See pricing</a>
+        <a class="button button-dark" href="/contact">Project inquiry <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

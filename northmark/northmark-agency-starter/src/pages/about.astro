@@ -1,0 +1,65 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<BaseLayout title="About Northmark" description="Northmark is being built around a simple idea: small businesses deserve thoughtful websites and practical support, without unnecessary agency complexity.">
+  <Header />
+  <main id="main">
+    <section class="bg-paper">
+      <div class="content-wrap py-16 sm:py-20 lg:py-24">
+        <p class="eyebrow">About Northmark</p>
+        <h1 class="font-display mt-4 max-w-4xl text-5xl leading-[1.05] sm:text-6xl">A better website shouldn't be complicated.</h1>
+        <p class="mt-7 max-w-2xl text-lg leading-8 text-slate-600">Northmark is being built around a simple idea: small businesses deserve a considered online presence and dependable support, without the complexity of a traditional agency relationship.</p>
+      </div>
+    </section>
+
+    <section class="content-wrap grid gap-10 py-16 sm:py-20 md:grid-cols-[.8fr_1.2fr] md:gap-16">
+      <div>
+        <p class="eyebrow">The point of it all</p>
+        <h2 class="font-display mt-4 text-4xl leading-tight sm:text-5xl">Good design should make things clearer.</h2>
+      </div>
+      <div class="space-y-5 text-base leading-8 text-slate-600">
+        <p>A website is often where someone first gets a feel for your business. It should make what you offer easy to understand, help the right people find their way around, and give them a clear next step.</p>
+        <p>Northmark focuses on practical design, direct communication, transparent scope, and support that continues beyond launch. No inflated promises—just thoughtful work shaped around what a small business actually needs.</p>
+      </div>
+    </section>
+
+    <section class="bg-paper py-16 sm:py-20">
+      <div class="content-wrap">
+        <div class="max-w-2xl">
+          <p class="eyebrow">A few principles</p>
+          <h2 class="font-display mt-4 text-4xl leading-tight sm:text-5xl">A more human way to get online.</h2>
+        </div>
+        <div class="mt-9 grid gap-4 md:grid-cols-3">
+          <article class="surface-card p-6">
+            <p class="font-display text-3xl text-accent">01</p>
+            <h3 class="mt-6 font-bold">Clarity over complexity</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-600">Straightforward language, useful pages, and an agreed scope before design work begins.</p>
+          </article>
+          <article class="surface-card p-6">
+            <p class="font-display text-3xl text-accent">02</p>
+            <h3 class="mt-6 font-bold">Considered, not cookie-cutter</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-600">A visual direction shaped by your business and customers—not a one-size-fits-all template.</p>
+          </article>
+          <article class="surface-card p-6">
+            <p class="font-display text-3xl text-accent">03</p>
+            <h3 class="mt-6 font-bold">Support that makes sense</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-600">Practical maintenance options and clear allowances, with no promise of unlimited work.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-wrap flex flex-col items-start justify-between gap-6 py-16 sm:py-20 md:flex-row md:items-center">
+      <div>
+        <p class="eyebrow">Let's talk about your site</p>
+        <h2 class="font-display mt-3 text-3xl sm:text-4xl">Ready for a clearer online presence?</h2>
+        <p class="mt-3 max-w-2xl text-sm leading-7 text-slate-600">The project inquiry form is currently a non-submitting preview; it needs to be connected before launch.</p>
+      </div>
+      <a class="button button-dark shrink-0" href="/contact">Explore the inquiry form <span aria-hidden="true">→</span></a>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

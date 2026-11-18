@@ -1,0 +1,159 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const services = [
+  { n: "01", title: "A website built around you", body: "A considered, mobile-friendly site that makes your services easy to understand and your next step easy to find." },
+  { n: "02", title: "A clear plan and price", body: "Know what is included before work begins, with a written scope and straightforward options for your budget." },
+  { n: "03", title: "Support after launch", body: "Choose an ongoing plan for routine maintenance and the content updates your selected package includes." }
+];
+
+const plans = [
+  { name: "Starter", build: "$499", monthly: "$79", pages: "Up to 4 pages", updates: "Routine technical maintenance" },
+  { name: "Business", build: "$799", monthly: "$129", pages: "Up to 7 pages", updates: "60 minutes of content updates / month", featured: true },
+  { name: "Professional", build: "$1,199", monthly: "$199", pages: "Up to 10 pages", updates: "Up to 2 hours of content updates / month" }
+];
+---
+
+<BaseLayout>
+  <Header />
+  <main id="main">
+    <section class="overflow-hidden bg-paper">
+      <div class="content-wrap grid items-center gap-12 py-16 sm:py-20 lg:grid-cols-[1.03fr_.97fr] lg:gap-16 lg:py-24">
+        <div class="rise-in">
+          <p class="eyebrow mb-6 inline-flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-accent"></span> Websites for small business</p>
+          <h1 class="font-display max-w-3xl text-5xl leading-[1.02] sm:text-6xl lg:text-7xl">A better website for the business <span class="text-accent">you've built.</span></h1>
+          <p class="mt-6 max-w-xl text-lg leading-8 text-slate-600">Thoughtful, professional websites for small businesses—without the big-agency process or guesswork about what it will cost.</p>
+          <div class="mt-8 flex flex-wrap items-center gap-3">
+            <a class="button button-dark" href="/contact">Plan your website <span aria-hidden="true">↗</span></a>
+            <a class="button button-outline" href="/pricing">See clear pricing <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="mt-10 flex flex-wrap gap-x-7 gap-y-3 border-t border-slate-300/70 pt-5 text-xs font-semibold uppercase tracking-[.1em] text-slate-500">
+            <span>Made for mobile</span><span>Clear scope</span><span>Ongoing support</span>
+          </div>
+        </div>
+
+        <div class="rise-in lg:pl-2" style="animation-delay: 100ms">
+          <div class="rounded-[1.4rem] border border-slate-200 bg-white p-3 shadow-soft sm:p-4">
+            <div class="flex items-center gap-1.5 border-b border-line px-2 pb-3">
+              <span class="h-2.5 w-2.5 rounded-full bg-[#df927b]"></span><span class="h-2.5 w-2.5 rounded-full bg-[#e6c27b]"></span><span class="h-2.5 w-2.5 rounded-full bg-[#83a28c]"></span>
+              <span class="ml-3 h-6 flex-1 rounded-full bg-paper"></span>
+            </div>
+            <div class="overflow-hidden rounded-xl bg-[#e9ede6]">
+              <div class="flex items-center justify-between border-b border-[#d6ddd4] bg-[#f7f8f4] px-4 py-3 sm:px-6">
+                <span class="font-display text-lg">field &amp; form</span>
+                <span class="text-[9px] font-bold uppercase tracking-[.14em] text-slate-500">Garden studio</span>
+              </div>
+              <div class="grid min-h-[16rem] sm:grid-cols-[1fr_.85fr]">
+                <div class="flex flex-col items-start justify-center p-5 sm:p-7">
+                  <span class="text-[9px] font-bold uppercase tracking-[.17em] text-[#62765f]">Thoughtful outdoor spaces</span>
+                  <p class="mt-3 font-display text-3xl leading-[1.05] tracking-tight sm:text-4xl">Room to<br />grow into.</p>
+                  <p class="mt-3 max-w-xs text-[11px] leading-5 text-slate-600">A fictional website concept for a local garden design studio.</p>
+                  <span class="mt-5 rounded-full bg-[#455a49] px-4 py-2 text-[9px] font-bold text-white">EXPLORE SERVICES ↗</span>
+                </div>
+                <div class="relative m-3 min-h-44 overflow-hidden rounded-lg bg-[linear-gradient(145deg,#83967d,#c2cbb4_50%,#e0d9c2)]">
+                  <div class="absolute -bottom-9 left-1/4 h-40 w-40 rounded-full border-[18px] border-white/25"></div>
+                  <div class="absolute -right-7 top-8 h-36 w-36 rounded-full bg-[#76866c]/50"></div>
+                  <div class="absolute bottom-4 right-4 rounded-full border border-white/60 bg-white/80 px-3 py-1.5 text-[8px] font-bold uppercase tracking-wider text-[#455a49]">Concept study</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="mt-3 text-center text-xs text-slate-500">An illustrative concept—not a client project.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-wrap py-20 sm:py-24">
+      <div class="grid gap-8 md:grid-cols-[.8fr_1.2fr] md:gap-16">
+        <div>
+          <p class="eyebrow">Good work, without the fuss</p>
+          <h2 class="font-display mt-4 text-4xl leading-tight sm:text-5xl">Small business deserves considered design, too.</h2>
+        </div>
+        <div>
+          <p class="text-lg leading-8 text-slate-600">You know your business. Northmark helps turn that into a clear, confident online presence—with a practical process, transparent pricing, and support that doesn't disappear at launch.</p>
+          <a class="mt-6 inline-flex items-center gap-2 text-sm font-bold text-ink transition hover:text-accent" href="/about">Get to know Northmark <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-paper py-20 sm:py-24">
+      <div class="content-wrap">
+        <div class="max-w-2xl">
+          <p class="eyebrow">What we bring to the table</p>
+          <h2 class="font-display mt-4 text-4xl leading-tight sm:text-5xl">The right things, done thoughtfully.</h2>
+          <p class="mt-5 leading-7 text-slate-600">A straightforward website experience, shaped around the people you want to reach and the way you actually work.</p>
+        </div>
+        <div class="mt-10 grid gap-4 md:grid-cols-3">
+          {services.map((service) => (
+            <article class="surface-card p-6 sm:p-7">
+              <p class="font-display text-2xl text-accent">{service.n}</p>
+              <h3 class="mt-8 text-lg font-bold tracking-tight">{service.title}</h3>
+              <p class="mt-3 text-sm leading-7 text-slate-600">{service.body}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="content-wrap grid gap-10 py-20 sm:py-24 md:grid-cols-[.9fr_1.1fr] md:gap-16">
+      <div>
+        <p class="eyebrow">A refreshingly clear process</p>
+        <h2 class="font-display mt-4 text-4xl leading-tight sm:text-5xl">From first conversation to a site you can share.</h2>
+        <p class="mt-5 leading-7 text-slate-600">No agency maze. Just a few clear steps, with scope and expectations agreed before the build begins.</p>
+        <a class="button button-outline mt-7" href="/services">See how it works <span aria-hidden="true">→</span></a>
+      </div>
+      <ol class="grid gap-0">
+        {[
+          ["01", "Tell us what matters", "Share your goals, services, audience, and the kind of site you need."],
+          ["02", "Agree on a clear scope", "Review the proposed pages, price, and timeline before work starts."],
+          ["03", "Build, review, and launch", "Shape the design together, review the site, and decide on ongoing support."]
+        ].map(([number, title, body]) => (
+          <li class="flex gap-5 border-b border-line py-6 first:pt-0 last:border-0">
+            <span class="font-display text-2xl text-accent">{number}</span>
+            <div><h3 class="font-bold">{title}</h3><p class="mt-2 text-sm leading-6 text-slate-600">{body}</p></div>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <section class="bg-paper py-20 sm:py-24">
+      <div class="content-wrap">
+        <div class="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
+          <div><p class="eyebrow">Simple, transparent pricing</p><h2 class="font-display mt-4 text-4xl sm:text-5xl">A clear place to start.</h2></div>
+          <p class="max-w-md text-sm leading-7 text-slate-600">One-time website build fee, plus a monthly plan for ongoing management. Choose the scope that fits—no open-ended work promises.</p>
+        </div>
+        <div class="mt-10 grid gap-4 md:grid-cols-3">
+          {plans.map((plan) => (
+            <article class={`rounded-2xl border p-6 sm:p-7 ${plan.featured ? "border-ink bg-ink text-white shadow-soft" : "border-line bg-white"}`}>
+              <p class={`text-sm font-bold ${plan.featured ? "text-[#e7b5a2]" : "text-accent"}`}>{plan.name}</p>
+              <p class="mt-5 text-xs opacity-70">One-time website build</p>
+              <p class="font-display mt-1 text-4xl">{plan.build}</p>
+              <p class="mt-3"><strong class="text-2xl">{plan.monthly}</strong><span class="ml-1 text-sm opacity-70">/ month</span></p>
+              <div class={`my-5 border-t ${plan.featured ? "border-white/20" : "border-line"}`}></div>
+              <ul class="grid gap-3 text-sm leading-6">
+                <li>✓ {plan.pages}</li><li>✓ Mobile-friendly design</li><li>✓ Contact page layout</li><li>✓ {plan.updates}</li>
+              </ul>
+              <a class={`mt-7 block rounded-full px-5 py-3 text-center text-sm font-bold transition hover:-translate-y-0.5 ${plan.featured ? "bg-white text-ink hover:bg-[#f1eee7]" : "bg-ink text-white hover:bg-[#33423e]"}`} href="/contact">Ask about this plan <span aria-hidden="true">→</span></a>
+            </article>
+          ))}
+        </div>
+        <p class="mt-5 text-xs leading-6 text-slate-500">These are introductory prices and subject to a written scope. Domain registration, premium third-party services, major redesigns, and work beyond the included allowance may cost extra. Monthly allowances do not roll over.</p>
+        <a class="mt-5 inline-flex items-center gap-2 text-sm font-bold" href="/pricing">Compare every plan detail <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <section class="bg-ink py-16 text-white sm:py-20">
+      <div class="content-wrap flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
+        <div>
+          <p class="eyebrow !text-[#e7b5a2]">Your next step</p>
+          <h2 class="font-display mt-4 max-w-2xl text-4xl leading-tight sm:text-5xl">Let's make your website feel like your business.</h2>
+          <p class="mt-4 max-w-xl leading-7 text-white/70">Start with a little about what you need. The project inquiry form is a preview and is not connected yet.</p>
+        </div>
+        <a class="button button-light shrink-0" href="/contact">Explore the project inquiry <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

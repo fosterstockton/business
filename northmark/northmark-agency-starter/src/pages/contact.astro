@@ -1,0 +1,81 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const formspreeEndpoint = import.meta.env.FORMSPREE_ENDPOINT;
+---
+
+<BaseLayout title="Project inquiry | Northmark" description="Tell Northmark about your business and website project.">
+  <Header />
+  <main id="main">
+    <section class="bg-paper">
+      <div class="content-wrap py-16 sm:py-20 lg:py-24">
+        <p class="eyebrow">Project inquiry</p>
+        <h1 class="font-display mt-4 max-w-3xl text-5xl leading-[1.05] sm:text-6xl">Tell us what your business needs next.</h1>
+        <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-600">A good first conversation starts with the basics: what you do, who you serve, and what you want your website to help with.</p>
+      </div>
+    </section>
+
+    <section class="content-wrap grid gap-10 py-12 sm:py-16 lg:grid-cols-[.8fr_1.2fr] lg:gap-16">
+      <aside class="lg:pt-3">
+        <p class="eyebrow">A useful place to start</p>
+        <h2 class="font-display mt-3 text-3xl leading-tight">A little context goes a long way.</h2>
+        <p class="mt-4 text-sm leading-7 text-slate-600">The inquiry form helps us understand what a useful scope might look like. Consider what pages you need, what you already have, and which questions customers ask most.</p>
+
+        <div class="mt-8 rounded-xl border border-line bg-paper p-5">
+          <p class="text-sm font-bold">Still comparing options?</p>
+          <p class="mt-2 text-sm leading-6 text-slate-600">Review the current introductory packages and what's included before reaching out.</p>
+          <a class="mt-4 inline-flex items-center gap-2 text-sm font-bold text-ink hover:text-accent" href="/pricing">Compare pricing <span aria-hidden="true">→</span></a>
+        </div>
+
+        <div class="mt-6 flex items-start gap-3 text-sm leading-6 text-slate-600">
+          <span class="font-display text-xl text-accent">01</span>
+          <p>Every project should begin with a written scope, agreed price, and a clear picture of ongoing costs.</p>
+        </div>
+      </aside>
+
+      <div id="form" class="rounded-2xl border border-line bg-white p-5 shadow-soft sm:p-8">
+        {!formspreeEndpoint && (
+          <div class="rounded-lg border border-[#e6c9b9] bg-[#fbf2ec] p-4" role="status">
+            <p class="text-sm font-bold text-ink">Form setup needed</p>
+            <p class="mt-1 text-sm leading-6 text-slate-600">Set the <code>FORMSPREE_ENDPOINT</code> environment variable and rebuild to enable submissions.</p>
+          </div>
+        )}
+
+        <form id="inquiry-form" class="mt-7" action={formspreeEndpoint} method="POST" aria-describedby="form-notice">
+          <fieldset disabled={!formspreeEndpoint}>
+            <legend class="sr-only">Project inquiry</legend>
+            <div class="grid gap-5 sm:grid-cols-2">
+              <div>
+                <label class="mb-2 block text-sm font-semibold" for="name">Your name</label>
+                <input class="form-control" id="name" name="name" autocomplete="name" placeholder="Your name" required />
+              </div>
+              <div>
+                <label class="mb-2 block text-sm font-semibold" for="business">Business name</label>
+                <input class="form-control" id="business" name="business" autocomplete="organization" placeholder="Your business" required />
+              </div>
+            </div>
+            <div class="mt-5">
+              <label class="mb-2 block text-sm font-semibold" for="email">Email address</label>
+              <input class="form-control" id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
+            </div>
+            <div class="mt-5">
+              <label class="mb-2 block text-sm font-semibold" for="website">Website <span class="font-normal text-slate-500">(optional)</span></label>
+              <input class="form-control" id="website" name="website" type="url" autocomplete="url" placeholder="https://yourbusiness.com" />
+            </div>
+            <div class="mt-5">
+              <label class="mb-2 block text-sm font-semibold" for="details">Project description</label>
+              <textarea class="form-control min-h-32 resize-y" id="details" name="details" placeholder="What would you like your website to do?" required></textarea>
+            </div>
+            <button class="mt-6 w-full rounded-full bg-ink px-6 py-4 text-sm font-bold text-white disabled:cursor-not-allowed disabled:opacity-50" type="submit" disabled={!formspreeEndpoint}>
+              {formspreeEndpoint ? "Send project inquiry" : "Inquiry form unavailable"}
+            </button>
+          </fieldset>
+          <p id="form-notice" class="mt-4 text-xs leading-5 text-slate-500">Your inquiry will be sent to Northmark through Formspree.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>
